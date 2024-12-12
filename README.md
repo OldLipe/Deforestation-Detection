@@ -1,7 +1,7 @@
 # Change Detection for Near-Real-Time Monitoring - Compedium
 
 <!-- badges: start -->
-    [![renv project](https://img.shields.io/badge/renv%20project-OK-brightgreen.svg)](https://rstudio.github.io/renv/)
+[![renv project](https://img.shields.io/badge/renv%20project-OK-brightgreen.svg)](https://rstudio.github.io/renv/)
 
 <!-- badges: end -->
 
