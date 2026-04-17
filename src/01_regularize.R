@@ -3,25 +3,25 @@ library(sits)
 #
 # Reading BDC tile
 #
-bdc_grid <- sf::st_read("./data/raw/bdc/BDC_TILE_LG_V2_003003.gpkg")
+bdc_grid <- sf::st_read("data/raw/bdc/BDC_TILE_LG_V2_003003.gpkg")
 
 #
 # Creating CBERS cube
 #
 cbers_cube <- sits::sits_cube(
-  source = "BDC",
+  source     = "BDC",
   collection = "CBERS-WFI-8D",
   start_date = "2023-01-01",
-  end_date = "2023-12-31",
-  bands = c("EVI", "CLOUD"),
-  tiles = "003003"
+  end_date   = "2023-12-31",
+  bands      = c("EVI", "CLOUD"),
+  tiles      = "003003"
 )
 
 #
 # Downloading CBERS cube images
 #
 cbers_cube <- sits::sits_cube_copy(
-  cbers_cube, 
+  cbers_cube,
   multicores = 12,
   output_dir = "./data/raw/bdc/cbers-4a/"
 )
@@ -30,12 +30,12 @@ cbers_cube <- sits::sits_cube_copy(
 # Creating Sentinel-1 cube
 #
 s1_cube <- sits::sits_cube(
-  source = "MPC",
+  source     = "MPC",
   collection = "SENTINEL-1-RTC",
-  start_date = "2024-01-01",
-  end_date = "2024-01-31",
-  roi = bdc_grid,
-  orbit = "descending"
+  start_date = "2023-01-01",
+  end_date   = "2023-12-31",
+  roi        = bdc_grid,
+  orbit      = "descending"
 )
 
 #

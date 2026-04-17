@@ -16,7 +16,7 @@ roi <- c(
 cbers_cube <- sits::sits_cube(
   source = "BDC",
   collection = "CBERS-WFI-8D",
-  data_dir = "./data/raw/bdc/cbers-4"
+  data_dir = "data/raw/bdc/cbers-4"
 )
 
 #
@@ -25,7 +25,7 @@ cbers_cube <- sits::sits_cube(
 s1_cube <- sits::sits_cube(
   source = "MPC",
   collection = "SENTINEL-1-RTC",
-  data_dir = "./data/raw/bdc/sentinel-1"
+  data_dir = "data/raw/bdc/sentinel-1"
 )
 
 #
@@ -65,6 +65,6 @@ res <- sits::sits_detect_change(
   multicores = 10,
   roi = roi,
   memsize = 24,
-  output_dir = "./data/derived",
+  output_dir = "data/derived",
   version = "evi-vh-chi09-aggregate-false-area-002"
 )

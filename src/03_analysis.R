@@ -7,17 +7,17 @@ library(dplyr)
 #
 # Reading bayts results
 #
-bayts <- sf::st_read("./data/derived/CBERS-4-4A_WFI_003003_2023-01-01_2023-12-27_detection_evi-vh-chi09-aggregate-false-area-002.gpkg")
+bayts <- sf::st_read("data/derived/CBERS-4-4A_WFI_003003_2023-01-01_2023-12-27_detection_evi-vh-chi09-aggregate-false-area-002.gpkg")
 
 #
 # Reading DETER polygons for Rondonia
 #
-deter <- sf::st_read("./data/raw/RO_DETER.gpkg")
+deter <- sf::st_read("data/raw/RO_DETER.gpkg")
 
 #
 # Reading region of interest area 
 #
-ext_area <- sf::st_read("./data/raw/roi_ext.gpkg")
+ext_area <- sf::st_read("data/raw/roi_ext.gpkg")
 
 #
 # Transforming roi polygon to the projection of bayts
